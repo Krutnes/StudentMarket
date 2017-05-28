@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+   <title>StudentMarket</title>
+   <meta charset="utf-8"></meta>
+   <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+   <div class="container-fluid">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="http://localhost:8080/">StudentMarket</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav">
+            <li><a href="http://localhost:8080/product/create">New Product</a></li>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://localhost:8080/myaccount"><span class="glyphicon glyphicon-log-in"></span> My Account</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
+<div class="container body-content">
+   <h2>Create a new account</h2>
+   <form th:action="@{/account/create}" method="post">
+      <div class="form-horizontal" autocomplete="off">
+         <hr />
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>First name</label>
+               <input type="text" class="form-control" name="fname" placeholder="Enter your first name"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <label></label>
+            <div class="col-md-10">
+               <label>Last name</label>
+               <input type="text" class="form-control" name="lname" placeholder="Enter your first name"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>Phone number</label>
+               <input type="number" class="form-control" name="phonenumber" placeholder="Enter your phone number"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>Email</label>
+               <input type="text" class="form-control" name="email" placeholder="Enter your email address"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>Address</label>
+               <input type="text" class="form-control" name="address" placeholder="Enter your address"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>Postal code</label>
+               <input type="number" class="form-control" name="postalcode" placeholder="Enter your postal code"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>City</label>
+               <input type="text" class="form-control" name="city" placeholder="Enter your city"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>Country</label>
+               <input type="text" class="form-control" name="country" placeholder="Enter your country"></input>
+            </div>
+         </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+               <label>Password</label>
+               <input type="password" class="form-control" name="password" placeholder="Enter your Password"></input>
+            </div>
+         </div>
+
+         <hr />
+
+         <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+               <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+         </div>
+      </div>
+   </form>
+</div>
+</body>
+</html>
